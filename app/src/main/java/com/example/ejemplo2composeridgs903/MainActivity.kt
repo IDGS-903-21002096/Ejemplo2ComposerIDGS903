@@ -34,17 +34,20 @@ import com.example.ejemplo2composeridgs903.ui.theme.Ejemplo2ComposerIDGS903Theme
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
+        //enableEdgeToEdge()
         setContent {
 
-            val navController = rememberNavController()
-            NavHost(navController = navController, startDestination = "inicio"){
-                composable("inicio"){ PantallaInicio(navController) }
-                composable("detalle/{nombre}"){ navBackStackEntry ->
-                    val nombre = navBackStackEntry.arguments?.getString("nombre") ?: "Invitado"
-                    PantallaDetalle(navController, nombre)
-                }
-            }
+        SumaDosNumeros()
+
+
+        //    val navController = rememberNavController()
+        //    NavHost(navController = navController, startDestination = "inicio"){
+        //        composable("inicio"){ PantallaInicio(navController) }
+        //        composable("detalle/{nombre}"){ navBackStackEntry ->
+        //            val nombre = navBackStackEntry.arguments?.getString("nombre") ?: "Invitado"
+        //            PantallaDetalle(navController, nombre)
+        //        }
+        //    }
 
         }
     }
